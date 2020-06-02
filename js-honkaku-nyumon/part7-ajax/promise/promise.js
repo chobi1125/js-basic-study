@@ -10,7 +10,7 @@ function asyncProcess(value) {
   });
 }
 
-asyncProcess('トウジロク').then(
+asyncProcess('入力しました').then(
   response => {
     console.log(response);
   },
