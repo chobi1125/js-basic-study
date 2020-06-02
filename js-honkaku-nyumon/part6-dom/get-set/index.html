@@ -1,0 +1,50 @@
+<link rel="stylesheet" href="./style.css">
+
+<form>
+  <!-- <textarea id="name" name="name" type="text"></textarea> -->
+  <h2 style="color:red" id="elem2">6月にしたいこと</h2>
+  <div>
+    <input id="name" type="text" value="6月にやりたいことは？？">
+  </div>
+  <div>
+    <input id="btn" type="button" value="送信">
+  </div>
+  <div id="elem">マウスに合わせて色変化</div>
+</form>
+
+<div id="result"></div>
+
+<script>
+  document.addEventListener('DOMContentLoaded',function() {
+    document.getElementById('btn').addEventListener('click', function() {
+      var name = document.getElementById('name');
+      var result = document.getElementById('result');
+      // name.value = "固定"
+      result.innerHTML = '6月にやりたいことは'+name.value+'です！';
+    }, false);
+  }, false);
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var elem = document.getElementById('elem');
+
+    elem.addEventListener('mouseover', function() {
+      this.style.backgroundColor = 'Yellow';
+    }, false);
+
+    elem.addEventListener('mouseout', function(){
+      this.style.backgroundColor = '';
+    }, false);
+  }, false);
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var elem2 = document.getElementById('elem2');
+
+    elem2.addEventListener('mouseover', function() {
+      this.className = 'highlight';
+    }, false);
+
+    elem2.addEventListener('mouseout', function(){
+      this.className = '';
+    }, false);
+  }, false);
+</script>
